@@ -7,7 +7,7 @@
   tasks:
   - name:
     stat:
-      path: ./test-file.txt
+      path: files/test-file.txt
     register: test_file
 
   - name: Output
