@@ -8,3 +8,7 @@
   - name: Printing hostname thru facts
     debug:
       msg: "{{ ansible_facts['hostname'] }}"
+
+  - name: Printer hostname thru inventory
+    debug:
+      msg: "{{ inventory_hostname }}"
