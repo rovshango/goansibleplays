@@ -2,11 +2,12 @@
 - name:
   hosts: localhost
   connection: local
+  gather_facts: false
   
   tasks:
   - name:
     stat:
-      path: /Users/rovshango/Downloads/ansible/test-file.txt
+      path: ./test-file.txt
     register: test_file
 
   - name: Output
