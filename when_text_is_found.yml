@@ -1,0 +1,15 @@
+---
+- name:
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars:
+    cmdout: "system default destination: Sales"
+    dest: Sales
+
+  # task will run, if Sales (variable dest) word is found in the cmdout variable value
+  - name: debug #1
+    debug:
+      msg: Sales is default Destination!
+    when: cmdout is search( dest ) 

@@ -1,0 +1,15 @@
+---
+- name:
+  hosts: localhost
+  connection: local
+  
+  tasks:
+  - name:
+    stat:
+      path: /Users/rovshango/Downloads/ansible/test-file.txt
+    register: test_file
+
+  - name: Output
+    debug:
+      msg: "File does exist."
+    when: test_file.stat.exists == true
