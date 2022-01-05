@@ -1,0 +1,10 @@
+---
+- name:
+  hosts: localhost
+  connection: local
+  gather_facts: true
+  
+  tasks:
+  - name: Printing hostname thru facts
+    debug:
+      msg: "{{ ansible_facts['hostname'] }}"
