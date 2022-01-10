@@ -1,0 +1,12 @@
+---
+- name:
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: 
+      assemble:
+        src: files/fragments
+        dest: files/assembled_result.txt
+        delimiter: '### START FRAGMENT ###'

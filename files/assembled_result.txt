@@ -1,0 +1,5 @@
+line=line1
+### START FRAGMENT ###
+line=line2
+### START FRAGMENT ###
+line=line3
